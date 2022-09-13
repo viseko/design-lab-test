@@ -1,1 +1,26 @@
-// Empty
+// Color pallete
+$cl-white: #ffffff;
+$cl-silver: #f5f5f5;
+$cl-silver-alt: #f5f5f7;
+$cl-black: #1d1d1f;
+$cl-darkgray: #333333;
+$cl-gray-middle: #52575f;
+$cl-stroke: #e1e1e1;
+$cl-file-stroke: #b9b1b1;
+$cl-file-text: #58585d;
+$cl-placeholder: #9b9b9e;
+$cl-primary: #0066cc;
+$cl-border: #e6e6e6;
+
+// Sizes
+$padding-desktop: 64px;
+$padding-mobile: 16px;
+$margin-desktop-m: 104px;
+$margin-desktop-s: 64px;
+$margin-mobile-m: 64px;
+$margin-mobile-s: 40px; 
+$max-page-width: 1792px + $padding-desktop * 2;
+$container-max-width: 883px + $padding-desktop * 2;
+
+// Fonts
+$gilroy: "Gilroy", "Arial", sans-serif;

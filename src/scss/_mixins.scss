@@ -1,18 +1,27 @@
-@mixin icon-png($packname, $width, $height, $scale, $xoffset, $yoffset) {
-  width: $width;
-  height: $height;
-  background-image: url("@icons/" + $packname + ".png");
-  background-position: $xoffset * 100% $yoffset * 100%;
-  background-size: $width * $scale, $height * $scale;
-}
-
-// Example icon mixin:
-// @mixin icon-happy($width, $height) {
-//   @include icon-png("icons", $width, $height, 2, 0, 0);
-// }
-
+// Common
 @mixin list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+// Fonts
+@mixin gilroy-regular {
+  font-weight: 400;
+  font-family: $gilroy;
+}
+
+@mixin gilroy-medium {
+  font-weight: 500;
+  font-family: $gilroy;
+}
+
+@mixin gilroy-semibold {
+  font-weight: 600;
+  font-family: $gilroy;
+}
+
+@mixin gilroy-bold {
+  font-weight: 700;
+  font-family: $gilroy;
 }
