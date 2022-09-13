@@ -1,5 +1,9 @@
 .page-header {
   margin-bottom: 94px;
+
+  @include mobile {
+    margin-bottom: 46px;
+  }
 }
 
 .page-header__nav {
