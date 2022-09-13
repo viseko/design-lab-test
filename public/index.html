@@ -1,17 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Тестовое задание</title>
   <!-- Favicons -->
   <link rel="icon" href="./favicon.svg">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <!-- Manifest -->
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
-  <div></div>
+  <!-- Page header -->
+  <header class="page-header">
+    <nav class="page-header__nav page-nav">
+      <ul class="page-nav__list">
+        <li class="page-nav__item">
+          <a href="#table" class="page-nav__link">
+            Таблица
+          </a>
+        </li>
+        <li class="page-nav__item">
+          <a href="#form" class="page-nav__link">
+            Форма
+          </a>
+        </li>
+        <li class="page-nav__item">
+          <a href="#gallery" class="page-nav__link">
+            Галерея
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-header__title">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">Главная</li>
+          <li class="breadcrumbs__item">Тестовое задание</li>
+        </ul>
+
+        <h1 class="page-header__heading">Тестовое задание</h1>
+    </div>
+  </header>
+
+  <!-- Table -->
+  <section class="section" id="table">
+    <div class="container">
+      <h2 class="section__title">Таблица</h2>
+      <p>Должна быть адаптивной, без дублирования информации.</p>
+
+      <div class="table">
+        <!-- Table markup -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="section" id="form">
+    <div class="container">
+      <h2 class="section__title">Форма</h2>
+      <p>
+        Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. Проверка, маска и вывод ошибки должны быть сделаны на JS или JQuery, но без плагинов.
+      </p>
+
+      <form class="form">
+        <!-- Form markup -->
+      </form>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section__title">Галерея</h2>
+      <p>
+        Фильтры должны фильтровать изображения без перезагрузки.  Адаптивность: между реперными точками — пропорциональное масштабирование, далее уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются только при наведении на блок с фото. Галерея должна быть сделана на JS или JQuery, но без плагинов.
+      </p>
+    </div>
+
+    <div class="container--gallery">
+      <div class="gallery">
+        <!-- Gallery markup -->
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>
