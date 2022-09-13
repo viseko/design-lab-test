@@ -37,12 +37,12 @@
     </nav>
 
     <div class="page-header__title">
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs__item">Главная</li>
-          <li class="breadcrumbs__item">Тестовое задание</li>
-        </ul>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">Главная</li>
+        <li class="breadcrumbs__item">Тестовое задание</li>
+      </ul>
 
-        <h1 class="page-header__heading">Тестовое задание</h1>
+      <h1 class="page-header__heading">Тестовое задание</h1>
     </div>
   </header>
 
@@ -52,17 +52,17 @@
       <h2 class="section__title">Таблица</h2>
       <p>Должна быть адаптивной, без дублирования информации.</p>
 
-      <div class="table">
-        <!-- Table markup -->
-        <div class="table__head">
-          <div class="table__row">
+      <div class="table__wrapper">
+        <div class="table">
+          <!-- Table markup -->
+          <div class="table__head">
             <div class="table__th">Название</div>
             <div class="table__th">Материал</div>
             <div class="table__th">Размер</div>
             <div class="table__th">Цена</div>
+            <div class="table__th"></div>
           </div>
         </div>
-        <div class="table__body"></div>
       </div>
     </div>
   </section>
@@ -72,7 +72,9 @@
     <div class="container">
       <h2 class="section__title">Форма</h2>
       <p>
-        Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. Проверка, маска и вывод ошибки должны быть сделаны на JS или JQuery, но без плагинов.
+        Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна
+        выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. Проверка, маска и вывод ошибки
+        должны быть сделаны на JS или JQuery, но без плагинов.
       </p>
 
       <form class="form">
@@ -86,7 +88,10 @@
     <div class="container">
       <h2 class="section__title">Галерея</h2>
       <p>
-        Фильтры должны фильтровать изображения без перезагрузки.  Адаптивность: между реперными точками — пропорциональное масштабирование, далее уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются только при наведении на блок с фото. Галерея должна быть сделана на JS или JQuery, но без плагинов.
+        Фильтры должны фильтровать изображения без перезагрузки. Адаптивность: между реперными точками —
+        пропорциональное масштабирование, далее уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото
+        (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются только при наведении на блок с фото. Галерея
+        должна быть сделана на JS или JQuery, но без плагинов.
       </p>
     </div>
 
@@ -96,6 +101,28 @@
       </div>
     </div>
   </section>
+
+  <!-- Templates -->
+  <template id="js-table-row-block">
+    <div class="table__row-block">
+      <div class="table__row-head">
+        <div class="table__th">Название</div>
+        <div class="table__th">Материал</div>
+        <div class="table__th">Размер</div>
+        <div class="table__th">Цена</div>
+      </div>
+      <div class="table__row-data">
+        <div class="table__td" data-field="name"></div>
+        <div class="table__td" data-field="material"></div>
+        <div class="table__td" data-field="sizes"></div>
+        <div class="table__td" data-field="price"></div>
+        <div class="table__td table__td--button">
+          <button class="btn-cart">В корзину</button>
+        </div>
+      </div>
+    </div>
+  </template>
+ 
 </body>
 
 </html>

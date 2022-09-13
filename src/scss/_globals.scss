@@ -17,8 +17,13 @@ body {
   line-height: 1.6em;
 
   @include mobile {
+    background-color: $cl-white;
     font-size: 16px;
   }
+}
+
+button:not(:disabled) {
+  cursor: pointer;
 }
 
 .visually-hidden {
