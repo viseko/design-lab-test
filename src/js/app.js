@@ -1,0 +1,2 @@
+// jQuery
+import $ from "jquery";
