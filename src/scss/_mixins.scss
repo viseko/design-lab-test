@@ -25,3 +25,10 @@
   font-weight: 700;
   font-family: $gilroy;
 }
+
+// Adaptive
+@mixin mobile {
+  @media (max-width: $br-mobile) {
+    @content;
+  }
+}

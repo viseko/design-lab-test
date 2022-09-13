@@ -1,0 +1,40 @@
+.page-nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 5%);
+  font-size: 16px;
+}
+
+.page-nav__list {
+  @include list-reset;
+
+  display: flex;
+}
+
+.page-nav__item {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-nav__item--active {
+  color: $cl-primary;
+}
+
+.page-nav__link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.1s, opacity 0.1s;
+
+  &:hover {
+    color: $cl-primary;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}

@@ -3,5 +3,11 @@
 // Global rules
 @import "fonts";
 @import "variables";
-@import "globals";
 @import "mixins";
+@import "globals";
+
+// Common blocks
+@import "blocks/page-nav";
+@import "blocks/page-header";
+@import "blocks/section";
+@import "blocks/breadcrumbs";

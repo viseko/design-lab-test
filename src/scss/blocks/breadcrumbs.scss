@@ -1,0 +1,30 @@
+.breadcrumbs {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  color: $cl-gray-middle;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  margin-right: 24px;
+
+  &::after {
+    content: "/";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    color: $cl-stroke;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}

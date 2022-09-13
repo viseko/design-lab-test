@@ -18,7 +18,7 @@
   <header class="page-header">
     <nav class="page-header__nav page-nav">
       <ul class="page-nav__list">
-        <li class="page-nav__item">
+        <li class="page-nav__item page-nav__item--active">
           <a href="#table" class="page-nav__link">
             Таблица
           </a>
@@ -54,6 +54,15 @@
 
       <div class="table">
         <!-- Table markup -->
+        <div class="table__head">
+          <div class="table__row">
+            <div class="table__th">Название</div>
+            <div class="table__th">Материал</div>
+            <div class="table__th">Размер</div>
+            <div class="table__th">Цена</div>
+          </div>
+        </div>
+        <div class="table__body"></div>
       </div>
     </div>
   </section>
