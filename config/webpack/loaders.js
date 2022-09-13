@@ -32,7 +32,7 @@ export default () => {
       type: "asset/resource",
       generator: {
         filename: "[name][ext]",
-        outputPath: "fonts",
+        outputPath: "fonts/",
       },
     },
 
@@ -42,7 +42,7 @@ export default () => {
       type: "asset/resource",
       generator: {
         filename: "[name][ext]",
-        outputPath: "files",
+        outputPath: "files/",
       },
     },
   ];
