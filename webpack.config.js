@@ -41,7 +41,6 @@ const webpackConfig = {
   entry: paths.src.js,
   output: {
     path: paths.buildFolder,
-    publicPath: "/",
     filename: setOutputFilename(),
     clean: true,
   },

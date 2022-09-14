@@ -32,7 +32,8 @@ export default () => {
       type: "asset/resource",
       generator: {
         filename: "[name][ext]",
-        outputPath: "fonts/",
+        outputPath: "fonts",
+        publicPath: "../fonts/",
       },
     },
 
