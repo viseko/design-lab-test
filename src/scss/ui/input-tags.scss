@@ -1,0 +1,48 @@
+.input-tags {
+  // -
+}
+
+.input-tags__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 16px;
+}
+
+.input-tags__item {
+  padding: 7px 16px 9px;
+  border-radius: 50px;
+  background-color: $cl-file-text;
+  color: $cl-white;
+  font-size: 14px;
+  line-height: 16px;
+
+  span {
+    margin-right: 4px;
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.input-tags__btn-remove {
+  border: 0;
+  background: none;
+  color: inherit;
+
+  svg {
+    transition: 0.2s;
+    will-change: transform;
+  }
+
+  &:hover svg {
+    transform: scale(0.9);
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}

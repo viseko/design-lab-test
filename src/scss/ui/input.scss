@@ -1,0 +1,73 @@
+.input {
+  position: relative;
+}
+
+.input__field {
+  display: block;
+  width: 100%;
+  padding: 16px 50px 16px 16px;
+  border: 1px solid $cl-stroke;
+  border-radius: 4px;
+  background-color: $cl-white;
+  color: $cl-black;
+  font-size: 16px;
+  line-height: 24px;
+  transition: box-shadow 0.2s;
+
+  &:focus {
+    box-shadow: inset 0 0 0 1px $cl-primary;
+    outline: 0;
+    caret-color: $cl-primary;
+  }
+}
+
+.input__alert {
+  display: none;
+  color: $cl-error;
+  font-size: 13px;
+}
+
+.input__icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  opacity: 0%;
+  pointer-events: none;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    margin: auto;
+  }
+}
+
+.input__icon--error {
+  color: $cl-error;
+}
+
+.input__icon--success {
+  color: $cl-success;
+}
+
+.input--invalid {
+  .input__field {
+    box-shadow: inset 0 0 0 1px $cl-error;
+  }
+
+  .input__alert {
+    display: block;
+  }
+
+  .input__icon--error {
+    opacity: 100%;
+  }
+}
+
+.input--valid {
+  .input__icon--success {
+    opacity: 100%;
+  }
+}

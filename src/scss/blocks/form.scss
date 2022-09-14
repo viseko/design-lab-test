@@ -1,0 +1,36 @@
+.form {
+  padding: 80px 96px;
+  border-radius: 20px;
+  background-color: $cl-silver-alt;
+
+  @include mobile {
+    padding: 41px 32px;
+    border-radius: 0;
+  }
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 47px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+
+  @include mobile {
+    margin-bottom: 38px;
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+.form__col {
+  // --
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 9px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}

@@ -1,0 +1,43 @@
+.checkbox {
+  display: flex;
+  cursor: pointer;
+
+  [type = "checkbox"] {
+    display: none;
+  }
+}
+
+.checkbox__thumb {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 50px;
+  background-color: $cl-checkbox-thumb;
+  transition: background-color 0.3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $cl-white;
+    transition: transform 0.3s;
+  }
+
+  :checked + & {
+    background-color: $cl-primary;
+  }
+
+  :checked + &::before {
+    transform: translateX(20px);
+  }
+}
+
+.checkbox__label {
+  font-size: 16px;
+  line-height: 24px;
+}
