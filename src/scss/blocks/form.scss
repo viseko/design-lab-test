@@ -1,5 +1,5 @@
 .form {
-  padding: 80px 96px;
+  padding: 79px 137px 96px 97px;
   border-radius: 20px;
   background-color: $cl-silver-alt;
 
@@ -23,13 +23,33 @@
   }
 }
 
+.form__row {
+  display: flex;
+  gap: 31px;
+  margin-bottom: 37px;
+
+  &:last-of-type {
+    margin-bottom: 47px;
+  }
+}
+
 .form__col {
-  // --
+  flex-grow: 1;
+  width: 100%;
+}
+
+.form__col--shrink {
+  flex-grow: 0;
+  width: auto;
+}
+
+.form__col--md {
+  max-width: 222px;
 }
 
 .form__label {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 11px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;

@@ -1,0 +1,20 @@
+.btn {
+  padding: 14px 28px 18px;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  background-color: $cl-primary;
+  color: $cl-white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  transition: opacity 0.1s, background-color 0.1s;
+
+  &:hover {
+    background-color: lighten($cl-primary, 5%);
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
