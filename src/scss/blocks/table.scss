@@ -31,7 +31,7 @@ $table-border: 1px solid $cl-stroke;
 
 .table__th,
 .table__td {
-  padding: 15px 31px 17px;
+  padding: 15px 31px 16px;
   border-bottom: $table-border;
 }
 
@@ -45,7 +45,11 @@ $table-border: 1px solid $cl-stroke;
 }
 
 .table__td--button {
-  // --
+  padding: 11px 31px 11px;
+}
+
+.table__align-right {
+  text-align: right;
 }
 
 @include mobile {

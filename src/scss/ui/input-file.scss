@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   height: 112px;
-  margin-bottom: 22px;
   padding: 0 19px;
   border-radius: 4px;
 
@@ -49,6 +48,7 @@
 
 .input-file__list {
   display: none;
+  padding-top: 22px;
 }
 
 .input-file__file-item {

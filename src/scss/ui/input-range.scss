@@ -1,13 +1,19 @@
 .input-range {
-  input {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    text-align: center;
-  }
+  margin-bottom: 23px;
+}
+
+.input-range__input {
+  padding-right: 16px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  text-align: center;
 }
 
 .input-range__scale {
-  position: relative;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
 }
 
 .input-range__slider {

@@ -1,5 +1,6 @@
 .checkbox {
-  display: flex;
+  display: inline-flex;
+  padding: 16px 0;
   cursor: pointer;
 
   [type = "checkbox"] {

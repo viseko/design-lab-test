@@ -59,7 +59,7 @@
             <div class="table__th">Название</div>
             <div class="table__th">Материал</div>
             <div class="table__th">Размер</div>
-            <div class="table__th">Цена</div>
+            <div class="table__th table__align-right">Цена</div>
             <div class="table__th"></div>
           </div>
         </div>
@@ -81,353 +81,365 @@
         <!-- Form markup -->
         <h3 class="form__title">Заказать проект</h3>
 
-        <!-- Text input -->
-        <div class="form__col">
-          <label class="form__label" for="order-name">Название</label>
-          <div class="input">
-            <input
-              class="input__field"
-              type="text"
-              name="order-name"
-              id="order-name"
-              required
-            >
-            <div class="input__icon input__icon--success">
-              <svg width="12" height="12">
-                <use xlink:href="../icons/icons.svg#check" />
-              </svg>
-            </div>
-            <div class="input__icon input__icon--error">
-              <svg width="12" height="12">
-                <use xlink:href="../icons/icons.svg#close" />
-              </svg>
-            </div>
-            <div class="input__alert">Введите название</div>
-          </div>
-        </div>
-
-        <!-- Range input -->
-        <div class="form__col">
-          <label class="form__label" for="order-cost">Стоимость</label>
-          <div class="input input-range">
-            <input
-              class="input__field"
-              type="text"
-              name="order-cost"
-              id="order-cost"
-              value="10 000 000"
-              required>
-              <div class="input-range__scale">
-                <input
-                  class="input-range__slider"
-                  type="range"
-                  min="1000"
-                  value="1000"
-                  max="4000"
-                  step="1">
-                <ul class="input-range__scale-divisions">
-                  <li>10</li>
-                  <li>20</li>
-                  <li>30</li>
-                  <li>40+</li>
-                </ul>
-              </div>
-          </div>
-        </div>
-
-        <!-- Number input-->
-        <div class="form__col">
-          <label class="form__label" for="order-square">Площадь</label>
-          <div class="input input-number">
-            <button
-              type="button"
-              class="input-number__btn input-number__btn--less">
-              <span class="visually-hidden">Меньше</span>
-              <svg width="16" height="16">
-                <use xlink:href="../icons/icons.svg#minus" />
-              </svg>
-            </button>
-            <input
-              class="input__field"
-              type="text"
-              name="order-square"
-              id="order-square"
-              value="10"
-              required
-            >
-            <button type="button" class="input-number__btn input-number__btn--more">
-              <span class="visually-hidden">Меньше</span>
-              <svg width="16" height="16">
-                <use xlink:href="../icons/icons.svg#plus" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Checkbox -->
-        <div class="form__col">
-          <b class="form__label">Отделка</b>
-          <label class="checkbox">
-            <input type="checkbox" value="finishing">
-            <span class="checkbox__thumb"></span>
-            <span class="checkbox__label">Нет</span>
-          </label>
-        </div>
-
-        <!-- Phone -->
-        <div class="form__col">
-          <label class="form__label" for="order-phone">Телефон</label>
-          <div class="input">
-            <input
-              class="input__field"
-              type="tel"
-              name="order-phone"
-              id="order-phone"
-              required
-            >
-            <div class="input__icon input__icon--success">
-              <svg width="12" height="12">
-                <use xlink:href="../icons/icons.svg#check" />
-              </svg>
-            </div>
-            <div class="input__icon input__icon--error">
-              <svg width="12" height="12">
-                <use xlink:href="../icons/icons.svg#close" />
-              </svg>
-            </div>
-            <div class="input__alert">Неполный номер</div>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="form__col">
-          <label class="form__label" for="order-mail">Почта</label>
-          <div class="input">
-            <input
-              class="input__field"
-              type="email"
-              name="order-mail"
-              id="order-mail"
-              required
-            >
-            <div class="input__icon input__icon--success">
-              <svg width="12" height="12">
-                <use xlink:href="../icons/icons.svg#check" />
-              </svg>
-            </div>
-            <div class="input__icon input__icon--error">
-              <svg width="12" height="12">
-                <use xlink:href="../icons/icons.svg#close" />
-              </svg>
-            </div>
-            <div class="input__alert">Неверный формат почты</div>
-          </div>
-        </div>
-
-        <!-- File input -->
-        <div class="form__col">
-          <b class="form__label">Приложить файлы</b>
-          <div class="input-file">
-            <div class="input-file__field">
-              <p>Кликните или перенесите файлы в эту область.</p>
-              <p>Только JPG, до 1 Мб</p>
-              <input class="input-file__input" type="file" name="file">
-              <svg preserveAspectRatio='none' width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect
-                  x="0"
-                  y="0"
-                  width="100%" height="100%"
-                  rx="4"
-                  stroke="#B9B1B1"
-                  stroke-width="1"
-                  stroke-dasharray="8 8"/>
+        <div class="form__row">
+          <!-- Text input -->
+          <div class="form__col">
+            <label class="form__label" for="order-name">Название</label>
+            <div class="input">
+              <input
+                class="input__field"
+                type="text"
+                name="order-name"
+                id="order-name"
+                required
+              >
+              <div class="input__icon input__icon--success">
+                <svg width="12" height="12">
+                  <use xlink:href="../icons/icons.svg#check" />
                 </svg>
+              </div>
+              <div class="input__icon input__icon--error">
+                <svg width="12" height="12">
+                  <use xlink:href="../icons/icons.svg#close" />
+                </svg>
+              </div>
+              <div class="input__alert">Введите название</div>
             </div>
-            <div class="input-file__list">
-              <div class="input-file__file-item">
-                <button class="input-file__btn-cancel" type="button">
-                  <span class="visually-hidden">Отмена</span>
-                  <svg width="8" height="8">
-                    <use xlink:href="../icons/icons.svg#close" />
+          </div>
+        </div>
+        
+        <div class="form__row">
+          <!-- Range input -->
+          <div class="form__col form__col--md">
+            <label class="form__label" for="order-cost">Стоимость</label>
+            <div class="input input-range">
+              <input
+                class="input__field input-range__input"
+                type="text"
+                name="order-cost"
+                id="order-cost"
+                value="10 000 000"
+                required>
+                <div class="input-range__scale">
+                  <input
+                    class="input-range__slider"
+                    type="range"
+                    min="1000"
+                    value="1000"
+                    max="4000"
+                    step="1">
+                  <ul class="input-range__scale-divisions">
+                    <li>10</li>
+                    <li>20</li>
+                    <li>30</li>
+                    <li>40+</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+  
+          <!-- Number input-->
+          <div class="form__col form__col--md">
+            <label class="form__label" for="order-square">Площадь</label>
+            <div class="input input-number">
+              <button
+                type="button"
+                class="input-number__btn input-number__btn--less">
+                <span class="visually-hidden">Меньше</span>
+                <svg width="16" height="16">
+                  <use xlink:href="../icons/icons.svg#minus" />
+                </svg>
+              </button>
+              <input
+                class="input__field"
+                type="text"
+                name="order-square"
+                id="order-square"
+                value="10"
+                required
+              >
+              <button type="button" class="input-number__btn input-number__btn--more">
+                <span class="visually-hidden">Меньше</span>
+                <svg width="16" height="16">
+                  <use xlink:href="../icons/icons.svg#plus" />
+                </svg>
+              </button>
+            </div>
+          </div>
+  
+          <div class="form__col form__col--shrink">
+            <!-- Checkbox -->
+            <b class="form__label">Отделка</b>
+            <label class="checkbox">
+              <input type="checkbox" value="finishing" checked>
+              <span class="checkbox__thumb"></span>
+              <span class="checkbox__label">Вайтбокс</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="form__row">
+          <!-- Phone -->
+          <div class="form__col form__col--md">
+            <label class="form__label" for="order-phone">Телефон</label>
+            <div class="input">
+              <input
+                class="input__field"
+                type="tel"
+                name="order-phone"
+                id="order-phone"
+                required
+              >
+              <div class="input__icon input__icon--success">
+                <svg width="12" height="12">
+                  <use xlink:href="../icons/icons.svg#check" />
+                </svg>
+              </div>
+              <div class="input__icon input__icon--error">
+                <svg width="12" height="12">
+                  <use xlink:href="../icons/icons.svg#close" />
+                </svg>
+              </div>
+              <div class="input__alert">Неполный номер</div>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="form__col">
+            <label class="form__label" for="order-mail">Почта</label>
+            <div class="input">
+              <input
+                class="input__field"
+                type="email"
+                name="order-mail"
+                id="order-mail"
+                required
+              >
+              <div class="input__icon input__icon--success">
+                <svg width="12" height="12">
+                  <use xlink:href="../icons/icons.svg#check" />
+                </svg>
+              </div>
+              <div class="input__icon input__icon--error">
+                <svg width="12" height="12">
+                  <use xlink:href="../icons/icons.svg#close" />
+                </svg>
+              </div>
+              <div class="input__alert">Неверный формат почты</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <!-- File input -->
+          <div class="form__col">
+            <b class="form__label">Приложить файлы</b>
+            <div class="input-file">
+              <div class="input-file__field">
+                <p>Кликните или перенесите файлы в эту область.</p>
+                <p>Только JPG, до 1 Мб</p>
+                <input class="input-file__input" type="file" name="file">
+                <svg preserveAspectRatio='none' width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="100%" height="100%"
+                    rx="4"
+                    stroke="#B9B1B1"
+                    stroke-width="1"
+                    stroke-dasharray="8 8"/>
                   </svg>
-                </button>
-                <span data-field="filename">filename-01.jpg</span>
-                <div class="input-file__loader">
-                  <div class="input-file__loader-fill"></div>
+              </div>
+              <div class="input-file__list">
+                <div class="input-file__file-item">
+                  <button class="input-file__btn-cancel" type="button">
+                    <span class="visually-hidden">Отмена</span>
+                    <svg width="8" height="8">
+                      <use xlink:href="../icons/icons.svg#close" />
+                    </svg>
+                  </button>
+                  <span data-field="filename">filename-01.jpg</span>
+                  <div class="input-file__loader">
+                    <div class="input-file__loader-fill"></div>
+                  </div>
+                </div>
+                <div class="input-file__file-item">
+                  <button class="input-file__btn-cancel" type="button">
+                    <span class="visually-hidden">Отмена</span>
+                    <svg width="8" height="8">
+                      <use xlink:href="../icons/icons.svg#close" />
+                    </svg>
+                  </button>
+                  <span>filename-01.jpg</span>
+                </div>
+                <div class="input-file__file-item">
+                  <button class="input-file__btn-cancel" type="button">
+                    <span class="visually-hidden">Отмена</span>
+                    <svg width="8" height="8">
+                      <use xlink:href="../icons/icons.svg#close" />
+                    </svg>
+                  </button>
+                  <span>filename-01.jpg</span>
                 </div>
               </div>
-              <div class="input-file__file-item">
-                <button class="input-file__btn-cancel" type="button">
-                  <span class="visually-hidden">Отмена</span>
-                  <svg width="8" height="8">
-                    <use xlink:href="../icons/icons.svg#close" />
-                  </svg>
-                </button>
-                <span>filename-01.jpg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <!-- Select -->
+          <div class="form__col">
+            <span class="form__label">Удобства</span>
+            <div class="input input-select">
+              <!-- Current selected elem -->
+              <div class="input__field input-select__field">
+                <label class="input-select__option-item input-select__option-item--current">
+                  <input type="radio" name="options" value="any" checked>
+                  <span>Любые</span>
+                </label>
               </div>
-              <div class="input-file__file-item">
-                <button class="input-file__btn-cancel" type="button">
-                  <span class="visually-hidden">Отмена</span>
-                  <svg width="8" height="8">
-                    <use xlink:href="../icons/icons.svg#close" />
-                  </svg>
-                </button>
-                <span>filename-01.jpg</span>
+              <!-- Icon -->
+              <div class="input__icon input-select__icon">
+                <svg width="12" height="12">
+                  <use xlink:href="../icons/icons.svg#angle-bottom" />
+                </svg>
+              </div>
+              <!-- List -->
+              <div class="input-select__option-list">
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="brick">
+                  <span>Кирпичный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="wood">
+                  <span>Деревянный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="monolith">
+                  <span>Монолитный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="carcas">
+                  <span>Каркасный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="shield">
+                  <span>Щитовой</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="brick">
+                  <span>Кирпичный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="wood">
+                  <span>Деревянный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="monolith">
+                  <span>Монолитный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="carcas">
+                  <span>Каркасный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="shield">
+                  <span>Щитовой</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="brick">
+                  <span>Кирпичный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="wood">
+                  <span>Деревянный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="monolith">
+                  <span>Монолитный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="carcas">
+                  <span>Каркасный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="shield">
+                  <span>Щитовой</span>
+                </label>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Select -->
-        <div class="form__col">
-          <span class="form__label">Удобства</span>
-          <div class="input input-select">
-            <!-- Current selected elem -->
-            <div class="input__field input-select__field">
-              <label class="input-select__option-item input-select__option-item--current">
-                <input type="radio" name="options" value="any" checked>
-                <span>Любые</span>
-              </label>
-            </div>
-            <!-- Icon -->
-            <div class="input__icon input-select__icon">
-              <svg width="12" height="12">
-                <use xlink:href="../icons/icons.svg#angle-bottom" />
-              </svg>
-            </div>
-            <!-- List -->
-            <div class="input-select__option-list">
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="brick">
-                <span>Кирпичный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="wood">
-                <span>Деревянный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="monolith">
-                <span>Монолитный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="carcas">
-                <span>Каркасный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="shield">
-                <span>Щитовой</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="brick">
-                <span>Кирпичный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="wood">
-                <span>Деревянный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="monolith">
-                <span>Монолитный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="carcas">
-                <span>Каркасный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="shield">
-                <span>Щитовой</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="brick">
-                <span>Кирпичный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="wood">
-                <span>Деревянный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="monolith">
-                <span>Монолитный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="carcas">
-                <span>Каркасный</span>
-              </label>
-              <label class="input-select__option-item">
-                <input type="radio" name="options" value="shield">
-                <span>Щитовой</span>
-              </label>
+          <!-- Password -->
+          <div class="form__col">
+            <label class="form__label" for="order-password">Пароль</label>
+            <div class="input input-password">
+              <input
+                class="input__field input-password__field"
+                type="password"
+                name="order-password"
+                id="order-password"
+                required
+              >
+              <button class="input__icon input-password__btn" type="button">
+                <span class="visually-hidden">Скрыть/показать пароль</span>
+                <svg class="input-password__icon-hide" width="19" height="18">
+                  <use xlink:href="../icons/icons.svg#eye" />
+                </svg>
+                <svg class="input-password__icon-show" width="19" height="18">
+                  <use xlink:href="../icons/icons.svg#eye-off" />
+                </svg>
+              </button>
+              <div class="input__alert">Слишком короткий пароль</div>
             </div>
           </div>
         </div>
 
-        <!-- Password -->
-        <div class="form__col">
-          <label class="form__label" for="order-password">Пароль</label>
-          <div class="input input-password">
-            <input
-              class="input__field input-password__field"
-              type="password"
-              name="order-password"
-              id="order-password"
-              required
-            >
-            <button class="input__icon input-password__btn" type="button">
-              <span class="visually-hidden">Скрыть/показать пароль</span>
-              <svg class="input-password__icon-hide" width="19" height="18">
-                <use xlink:href="../icons/icons.svg#eye" />
-              </svg>
-              <svg class="input-password__icon-show" width="19" height="18">
-                <use xlink:href="../icons/icons.svg#eye-off" />
-              </svg>
-            </button>
-            <div class="input__alert">Слишком короткий пароль</div>
+        <div class="form__row">
+          <!-- Wishes -->
+          <div class="form__col">
+            <label class="form__label" for="order-wishes">Пожелания</label>
+            <div class="input input-tags">
+              <input
+                class="input__field"
+                type="text"
+                id="order-wishes"
+              >
+              <ul class="input-tags__list">
+                <li class="input-tags__item">
+                  <input type="checkbox" name="wishes" value="Кондиционер">
+                  <span>Кондиционер</span>
+                  <button type="button" class="input-tags__btn-remove">
+                    <span class="visually-hidden">Удалить</span>
+                    <svg width="8" height="8">
+                      <use xlink:href="../icons/icons.svg#close" />
+                    </svg>
+                  </button>
+                </li>
+                <li class="input-tags__item">
+                  <input type="checkbox" name="wishes" value="Холодильник">
+                  <span>Холодильник</span>
+                  <button type="button" class="input-tags__btn-remove">
+                    <span class="visually-hidden">Удалить</span>
+                    <svg width="8" height="8">
+                      <use xlink:href="../icons/icons.svg#close" />
+                    </svg>
+                  </button>
+                </li>
+                <li class="input-tags__item">
+                  <input type="checkbox" name="wishes" value="Интернет">
+                  <span>Интернет</span>
+                  <button type="button" class="input-tags__btn-remove">
+                    <span class="visually-hidden">Удалить</span>
+                    <svg width="8" height="8">
+                      <use xlink:href="../icons/icons.svg#close" />
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <!-- Wishes -->
-        <div class="form__col">
-          <label class="form__label" for="order-wishes">Пожелания</label>
-          <div class="input input-tags">
-            <input
-              class="input__field"
-              type="text"
-              id="order-wishes"
-            >
-            <ul class="input-tags__list">
-              <li class="input-tags__item">
-                <input type="checkbox" name="wishes" value="Кондиционер">
-                <span>Кондиционер</span>
-                <button type="button" class="input-tags__btn-remove">
-                  <span class="visually-hidden">Удалить</span>
-                  <svg width="8" height="8">
-                    <use xlink:href="../icons/icons.svg#close" />
-                  </svg>
-                </button>
-              </li>
-              <li class="input-tags__item">
-                <input type="checkbox" name="wishes" value="Холодильник">
-                <span>Холодильник</span>
-                <button type="button" class="input-tags__btn-remove">
-                  <span class="visually-hidden">Удалить</span>
-                  <svg width="8" height="8">
-                    <use xlink:href="../icons/icons.svg#close" />
-                  </svg>
-                </button>
-              </li>
-              <li class="input-tags__item">
-                <input type="checkbox" name="wishes" value="Интернет">
-                <span>Интернет</span>
-                <button type="button" class="input-tags__btn-remove">
-                  <span class="visually-hidden">Удалить</span>
-                  <svg width="8" height="8">
-                    <use xlink:href="../icons/icons.svg#close" />
-                  </svg>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <button class="btn" type="submit">Отправить заявку</button>
       </form>
     </div>
   </section>
@@ -464,7 +476,7 @@
         <div class="table__td" data-field="name"></div>
         <div class="table__td" data-field="material"></div>
         <div class="table__td" data-field="sizes"></div>
-        <div class="table__td" data-field="price"></div>
+        <div class="table__td table__align-right" data-field="price"></div>
         <div class="table__td table__td--button">
           <button class="btn-cart">В корзину</button>
         </div>
