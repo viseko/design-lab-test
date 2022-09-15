@@ -85,7 +85,7 @@
           <!-- Text input -->
           <div class="form__col">
             <label class="form__label" for="order-name">Название</label>
-            <div class="input">
+            <div class="input js-form-name">
               <input
                 class="input__field"
                 type="text"
@@ -112,7 +112,7 @@
           <!-- Range input -->
           <div class="form__col form__col--md">
             <label class="form__label" for="order-cost">Стоимость</label>
-            <div class="input input-range">
+            <div class="input input-range js-input-range">
               <input
                 class="input__field input-range__input"
                 type="text"
@@ -123,17 +123,8 @@
                 <div class="input-range__scale">
                   <input
                     class="input-range__slider"
-                    type="range"
-                    min="1000"
-                    value="1000"
-                    max="4000"
-                    step="1">
-                  <ul class="input-range__scale-divisions">
-                    <li>10</li>
-                    <li>20</li>
-                    <li>30</li>
-                    <li>40+</li>
-                  </ul>
+                    type="range">
+                  <ul class="input-range__scale-divisions"></ul>
                 </div>
             </div>
           </div>
@@ -141,7 +132,7 @@
           <!-- Number input-->
           <div class="form__col form__col--md">
             <label class="form__label" for="order-square">Площадь</label>
-            <div class="input input-number">
+            <div class="input input-number js-input-number">
               <button
                 type="button"
                 class="input-number__btn input-number__btn--less">
@@ -167,13 +158,14 @@
             </div>
           </div>
   
+          <!-- Checkbox -->
           <div class="form__col form__col--shrink">
             <!-- Checkbox -->
             <b class="form__label">Отделка</b>
-            <label class="checkbox">
+            <label class="checkbox js-checkbox">
               <input type="checkbox" value="finishing" checked>
               <span class="checkbox__thumb"></span>
-              <span class="checkbox__label">Вайтбокс</span>
+              <span class="checkbox__label"></span>
             </label>
           </div>
         </div>
@@ -182,7 +174,7 @@
           <!-- Phone -->
           <div class="form__col form__col--md">
             <label class="form__label" for="order-phone">Телефон</label>
-            <div class="input">
+            <div class="input js-input-phone">
               <input
                 class="input__field"
                 type="tel"
@@ -206,7 +198,7 @@
           <!-- Email -->
           <div class="form__col">
             <label class="form__label" for="order-mail">Почта</label>
-            <div class="input">
+            <div class="input js-input-mail">
               <input
                 class="input__field"
                 type="email"
@@ -289,14 +281,9 @@
           <!-- Select -->
           <div class="form__col">
             <span class="form__label">Удобства</span>
-            <div class="input input-select">
+            <div class="input input-select js-input-select">
               <!-- Current selected elem -->
-              <div class="input__field input-select__field">
-                <label class="input-select__option-item input-select__option-item--current">
-                  <input type="radio" name="options" value="any" checked>
-                  <span>Любые</span>
-                </label>
-              </div>
+              <div class="input__field input-select__field"></div>
               <!-- Icon -->
               <div class="input__icon input-select__icon">
                 <svg width="12" height="12">
@@ -306,24 +293,8 @@
               <!-- List -->
               <div class="input-select__option-list">
                 <label class="input-select__option-item">
-                  <input type="radio" name="options" value="brick">
-                  <span>Кирпичный</span>
-                </label>
-                <label class="input-select__option-item">
-                  <input type="radio" name="options" value="wood">
-                  <span>Деревянный</span>
-                </label>
-                <label class="input-select__option-item">
-                  <input type="radio" name="options" value="monolith">
-                  <span>Монолитный</span>
-                </label>
-                <label class="input-select__option-item">
-                  <input type="radio" name="options" value="carcas">
-                  <span>Каркасный</span>
-                </label>
-                <label class="input-select__option-item">
-                  <input type="radio" name="options" value="shield">
-                  <span>Щитовой</span>
+                  <input type="radio" name="options" value="any" checked="true">
+                  <span>Любые</span>
                 </label>
                 <label class="input-select__option-item">
                   <input type="radio" name="options" value="brick">
@@ -346,23 +317,43 @@
                   <span>Щитовой</span>
                 </label>
                 <label class="input-select__option-item">
-                  <input type="radio" name="options" value="brick">
+                  <input type="radio" name="options" value="brick1">
                   <span>Кирпичный</span>
                 </label>
                 <label class="input-select__option-item">
-                  <input type="radio" name="options" value="wood">
+                  <input type="radio" name="options" value="wood1">
                   <span>Деревянный</span>
                 </label>
                 <label class="input-select__option-item">
-                  <input type="radio" name="options" value="monolith">
+                  <input type="radio" name="options" value="monolith1">
                   <span>Монолитный</span>
                 </label>
                 <label class="input-select__option-item">
-                  <input type="radio" name="options" value="carcas">
+                  <input type="radio" name="options" value="carcas1">
                   <span>Каркасный</span>
                 </label>
                 <label class="input-select__option-item">
-                  <input type="radio" name="options" value="shield">
+                  <input type="radio" name="options" value="shield1">
+                  <span>Щитовой</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="brick2">
+                  <span>Кирпичный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="wood2">
+                  <span>Деревянный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="monolith2">
+                  <span>Монолитный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="carcas2">
+                  <span>Каркасный</span>
+                </label>
+                <label class="input-select__option-item">
+                  <input type="radio" name="options" value="shield2">
                   <span>Щитовой</span>
                 </label>
               </div>
@@ -372,7 +363,7 @@
           <!-- Password -->
           <div class="form__col">
             <label class="form__label" for="order-password">Пароль</label>
-            <div class="input input-password">
+            <div class="input input-password js-input-password">
               <input
                 class="input__field input-password__field"
                 type="password"
@@ -398,44 +389,13 @@
           <!-- Wishes -->
           <div class="form__col">
             <label class="form__label" for="order-wishes">Пожелания</label>
-            <div class="input input-tags">
+            <div class="input input-tags js-input-tags">
               <input
                 class="input__field"
                 type="text"
                 id="order-wishes"
               >
-              <ul class="input-tags__list">
-                <li class="input-tags__item">
-                  <input type="checkbox" name="wishes" value="Кондиционер">
-                  <span>Кондиционер</span>
-                  <button type="button" class="input-tags__btn-remove">
-                    <span class="visually-hidden">Удалить</span>
-                    <svg width="8" height="8">
-                      <use xlink:href="../icons/icons.svg#close" />
-                    </svg>
-                  </button>
-                </li>
-                <li class="input-tags__item">
-                  <input type="checkbox" name="wishes" value="Холодильник">
-                  <span>Холодильник</span>
-                  <button type="button" class="input-tags__btn-remove">
-                    <span class="visually-hidden">Удалить</span>
-                    <svg width="8" height="8">
-                      <use xlink:href="../icons/icons.svg#close" />
-                    </svg>
-                  </button>
-                </li>
-                <li class="input-tags__item">
-                  <input type="checkbox" name="wishes" value="Интернет">
-                  <span>Интернет</span>
-                  <button type="button" class="input-tags__btn-remove">
-                    <span class="visually-hidden">Удалить</span>
-                    <svg width="8" height="8">
-                      <use xlink:href="../icons/icons.svg#close" />
-                    </svg>
-                  </button>
-                </li>
-              </ul>
+              <ul class="input-tags__list"></ul>
             </div>
           </div>
         </div>
