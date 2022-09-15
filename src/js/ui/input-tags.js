@@ -43,7 +43,7 @@ export default class InputTags {
 
   insertTag(str) {
     const id = Number(Date.now()).toString(32);
-    const name = this.name;
+    const name = this.fieldName;
 
     const elem = document.createElement("li");
     elem.className = "input-tags__item";

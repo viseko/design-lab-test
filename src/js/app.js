@@ -12,6 +12,7 @@ import goodsData from "./data/goods.js";
 import InputPassword from "./ui/input-password.js";
 import InputSelect from "./ui/input-select.js";
 import InputTags from "./ui/input-tags.js";
+import InputFile from "./ui/input-file.js";
 
 // Fetching goods data and build table
 const $table = $(".table");
@@ -81,5 +82,9 @@ const formFields = [
     divider: ",",
     placeholder: "укажите через запятую",
     fieldName: "wishes",
+  }),
+  new InputFile({
+    selector: ".js-input-file",
+    accept: ".jpg",
   }),
 ];

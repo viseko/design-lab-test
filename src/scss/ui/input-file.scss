@@ -1,4 +1,5 @@
-.input-file {
+.input-file._show-list .input-file__list {
+  display: block;
 }
 
 .input-file__field {
@@ -100,8 +101,19 @@
   position: absolute;
   right: 0;
   left: 0;
-  width: 50%;
+  width: 0%;
   height: 100%;
   border-radius: inherit;
   background-color: $cl-primary;
+}
+
+// File loading imitation :)
+@keyframes load-file {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
 }

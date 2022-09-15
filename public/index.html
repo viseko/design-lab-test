@@ -77,7 +77,10 @@
         должны быть сделаны на JS или JQuery, но без плагинов.
       </p>
 
-      <form class="form">
+      <form
+        class="form"
+        action="https://echo.htmlacademy.ru"
+      >
         <!-- Form markup -->
         <h3 class="form__title">Заказать проект</h3>
 
@@ -225,11 +228,16 @@
           <!-- File input -->
           <div class="form__col">
             <b class="form__label">Приложить файлы</b>
-            <div class="input-file">
+            <div class="input-file js-input-file">
               <div class="input-file__field">
                 <p>Кликните или перенесите файлы в эту область.</p>
                 <p>Только JPG, до 1 Мб</p>
-                <input class="input-file__input" type="file" name="file">
+                <input
+                  class="input-file__input"
+                  type="file"
+                  name="files"
+                  multiple
+                >
                 <svg preserveAspectRatio='none' width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect
                     x="0"
@@ -241,38 +249,7 @@
                     stroke-dasharray="8 8"/>
                   </svg>
               </div>
-              <div class="input-file__list">
-                <div class="input-file__file-item">
-                  <button class="input-file__btn-cancel" type="button">
-                    <span class="visually-hidden">Отмена</span>
-                    <svg width="8" height="8">
-                      <use xlink:href="../icons/icons.svg#close" />
-                    </svg>
-                  </button>
-                  <span data-field="filename">filename-01.jpg</span>
-                  <div class="input-file__loader">
-                    <div class="input-file__loader-fill"></div>
-                  </div>
-                </div>
-                <div class="input-file__file-item">
-                  <button class="input-file__btn-cancel" type="button">
-                    <span class="visually-hidden">Отмена</span>
-                    <svg width="8" height="8">
-                      <use xlink:href="../icons/icons.svg#close" />
-                    </svg>
-                  </button>
-                  <span>filename-01.jpg</span>
-                </div>
-                <div class="input-file__file-item">
-                  <button class="input-file__btn-cancel" type="button">
-                    <span class="visually-hidden">Отмена</span>
-                    <svg width="8" height="8">
-                      <use xlink:href="../icons/icons.svg#close" />
-                    </svg>
-                  </button>
-                  <span>filename-01.jpg</span>
-                </div>
-              </div>
+              <div class="input-file__list"></div>
             </div>
           </div>
         </div>
