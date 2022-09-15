@@ -50,6 +50,10 @@ $table-border: 1px solid $cl-stroke;
 
 .table__align-right {
   text-align: right;
+
+  @include mobile {
+    text-align: left;
+  }
 }
 
 @include mobile {
