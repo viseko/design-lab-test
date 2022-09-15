@@ -13,6 +13,7 @@ import InputPassword from "./ui/input-password.js";
 import InputSelect from "./ui/input-select.js";
 import InputTags from "./ui/input-tags.js";
 import InputFile from "./ui/input-file.js";
+import Form from "./ui/form.js";
 
 // Fetching goods data and build table
 const $table = $(".table");
@@ -88,3 +89,9 @@ const formFields = [
     accept: ".jpg",
   }),
 ];
+
+// Init form
+new Form({
+  selector: ".js-form",
+  fields: formFields,
+});
