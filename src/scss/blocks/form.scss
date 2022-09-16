@@ -61,10 +61,10 @@
 
   .form__col--shrink {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     .form__label {
-      margin-right: 89px;
       margin-bottom: 0;
     }
   }
