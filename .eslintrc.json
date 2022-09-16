@@ -141,7 +141,7 @@
     "nonblock-statement-body-position": "warn",
     // "object-curly-newline": ["warn", "always"], <-- incompatible with Prettier
     "object-property-newline": "warn",
-    "operator-linebreak": ["warn", "after"],
+    "operator-linebreak": "off",
     "padded-blocks": ["warn", "never"],
     "quotes": ["warn", "double"],
     "rest-spread-spacing": "warn", 
