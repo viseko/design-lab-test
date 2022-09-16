@@ -5,7 +5,19 @@ export default () => {
     // Styles
     {
       test: /\.(css|sass|scss)$/,
-      use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      use: [
+        MiniCssExtractPlugin.loader,
+        "css-loader",
+        {
+          loader: "postcss-loader",
+          options: {
+            postcssOptions: {
+              plugins: ["autoprefixer"],
+            },
+          },
+        },
+        "sass-loader",
+      ],
     },
 
     // JavaScript
