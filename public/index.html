@@ -393,9 +393,37 @@
       </p>
     </div>
 
-    <div class="container--gallery">
-      <div class="gallery">
-        <!-- Gallery markup -->
+    <div class="gallery">
+      <!-- Filter -->
+      <div class="gallery__filter-wrapper">
+        <div class="gallery__filter">
+          <button data-type="bath" class="gallery__filter-btn">Бани</button>
+          <button data-type="sauna" class="gallery__filter-btn">Сауны</button>
+          <button data-type="hammam" class="gallery__filter-btn">Хаммамы</button>
+          <button data-type="all" class="gallery__filter-btn">Все</button>
+        </div>
+      </div>
+      <!-- Slider -->
+      <div class="gallery__container">
+        <div class="gallery__wrapper js-gallery-slider swiper">
+          <!-- List -->
+          <div class="js-gallery-list swiper-wrapper"></div>
+          <!-- Controls -->
+          <button class="gallery__control gallery__control--prev js-gallery-prev">
+            <span class="visually-hidden">Next</span>
+            <svg width="21" height="21">
+              <use xlink:href="../icons/icons.svg#arrow-left" />
+            </svg>
+          </button>
+          <button class="gallery__control gallery__control--next js-gallery-next">
+            <span class="visually-hidden">Back</span>
+            <svg width="21" height="21">
+              <use xlink:href="../icons/icons.svg#arrow-right" />
+            </svg>
+          </button>
+        </div>
+        <!-- Pagination -->
+        <div class="gallery__pagination"></div>
       </div>
     </div>
   </section>
@@ -418,6 +446,17 @@
           <button class="btn-cart">В корзину</button>
         </div>
       </div>
+    </div>
+  </template>
+
+  <template id="js-gallery-slide">
+    <div class="gallery__slide swiper-slide">
+      <picture>
+        <source media="(max-width: 500px)" data-source="mobile-webp">
+        <source media="(max-width: 500px)" data-source="mobile" type="image/webp">
+        <source data-source="desktop-webp" type="image/webp">
+        <img data-source="desktop" class="gallery__image" width="430" height="242">
+      </picture>
     </div>
   </template>
  

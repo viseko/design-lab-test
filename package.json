@@ -71,6 +71,7 @@
   },
   "dependencies": {
     "jquery": "^3.6.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "swiper": "^8.4.2"
   }
 }
