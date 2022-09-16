@@ -2,12 +2,8 @@
   margin-bottom: 94px;
 
   @include mobile {
-    margin-bottom: 46px;
+    margin-bottom: 49px;
   }
-}
-
-.page-header__nav {
-  // --
 }
 
 .page-header__title {
@@ -16,6 +12,10 @@
   align-items: center;
   padding-top: 83px;
   text-align: center;
+
+  @include mobile {
+    padding-top: 51px;
+  }
 }
 
 .page-header__heading {

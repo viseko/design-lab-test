@@ -75,7 +75,7 @@ $table-border: 1px solid $cl-stroke;
     position: relative;
     display: flex;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     border-top: $table-border;
   }
 
@@ -107,8 +107,22 @@ $table-border: 1px solid $cl-stroke;
   
   .table__td--button {
     position: absolute;
-    right: -16px;
-    bottom: -3px;
+    right: 1px;
+    bottom: -5px;
     border-bottom: 0;
+  }
+}
+
+@include mobile {
+  .table {
+    line-height: 23px;
+  }
+
+  .table__th {
+    padding-right: 18px;
+  }
+
+  .table__td {
+    padding-left: 15px;
   }
 }

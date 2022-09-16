@@ -1,14 +1,9 @@
-.gallery {
-}
-
-.gallery__filter-wrapper {
-}
-
 .gallery__filter {
   display: flex;
   gap: 8px;
   justify-content: center;
   margin-bottom: 40px;
+  padding-top: 10px;
 }
 
 .gallery__filter-btn {
@@ -125,7 +120,29 @@
 }
 
 @include mobile {
+  .gallery__filter {
+    margin-bottom: 25px;
+    padding-top: 0;
+  }
+
   .gallery__container {
     padding: 0 16px;
+  }
+
+  .gallery__wrapper {
+    margin-bottom: 25px;
+  }
+
+  .gallery__control {
+    display: none;
+  }
+
+  .gallery__pagination {
+    gap: 12px;
+  }
+  
+  .gallery__pagination-bullet {
+    width: 12px;
+    height: 12px;
   }
 }
