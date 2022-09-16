@@ -1,22 +1,27 @@
-// jQuery
-import $ from "jquery";
-
 // Data
 import goodsData from "../data/goods.js";
 
-const $table = $(".table");
+const table = document.querySelector(".table");
 
-const $tableRows = goodsData.map((data) => {
+const tableRows = goodsData.map((data) => {
   // Cloning HTML-template
-  const $rowBlock = $($("#js-table-row-block").html().trim());
-  $rowBlock.find("[data-field=name]").html(data.name);
-  $rowBlock.find("[data-field=material]").html(data.material);
-  $rowBlock
-    .find("[data-field=sizes]")
-    .html(`${data.sizes.join(" × ")}&nbsp;мм`);
-  $rowBlock.find("[data-field=price]").html(`${data.price}&nbsp;₽`);
+  const rowBlockFragment = document
+    .querySelector("#js-table-row-block")
+    .content.cloneNode(true);
 
-  return $rowBlock;
+  const rowBlock = rowBlockFragment.firstElementChild;
+  rowBlock.querySelector("[data-field=name]").innerHTML = data.name;
+  rowBlock.querySelector("[data-field=material]").innerHTML = data.material;
+  rowBlock.querySelector("[data-field=sizes]").innerHTML = `${data.sizes.join(
+    " × "
+  )}&nbsp;мм`;
+  rowBlock.querySelector(
+    "[data-field=price]"
+  ).innerHTML = `${data.price}&nbsp;₽`;
+
+  return rowBlock;
 });
 
-$table.append($tableRows);
+tableRows.forEach((row) => {
+  table.append(row);
+});
