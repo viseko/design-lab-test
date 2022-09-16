@@ -38,7 +38,7 @@ export default class InputFile {
       <button data-fileid="${id}" class="input-file__btn-cancel" type="button">
         <span class="visually-hidden">Отмена</span>
         <svg width="8" height="8">
-          <use xlink:href="../icons/icons.svg#close" />
+          <use xlink:href="./icons/icons.svg#close" />
         </svg>
       </button>
       <span data-field="filename">${fileName}</span>

@@ -53,7 +53,7 @@ export default class InputTags {
       <button data-tagid="${id}" type="button" class="input-tags__btn-remove">
         <span class="visually-hidden">Удалить</span>
         <svg width="8" height="8">
-          <use xlink:href="../icons/icons.svg#close" />
+          <use xlink:href="./icons/icons.svg#close" />
         </svg>
       </button>
     `.trim();

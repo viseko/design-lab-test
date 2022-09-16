@@ -30,11 +30,11 @@ function appendSlides(type) {
 
     slide.dataset.type = data.type;
     desktopImg.alt = data.type;
-    desktopImg.src = `../img/gallery/${data.img}.jpg`;
-    desktopImg.srcset = `../img/gallery/${data.img}@2x.jpg 2x`;
-    desktopWebp.srcset = `../img/gallery/${data.img}.webp, ../img/gallery/${data.img}@2x.webp 2x`;
-    mobileImg.srcset = `../img/gallery/${data.img}-mobile.jpg, ../img/gallery/${data.img}.jpg 2x`;
-    mobileWebp.srcset = `../img/gallery/${data.img}-mobile.webp, ../img/gallery/${data.img}.webp 2x`;
+    desktopImg.src = `./img/gallery/${data.img}.jpg`;
+    desktopImg.srcset = `./img/gallery/${data.img}@2x.jpg 2x`;
+    desktopWebp.srcset = `./img/gallery/${data.img}.webp, ./img/gallery/${data.img}@2x.webp 2x`;
+    mobileImg.srcset = `./img/gallery/${data.img}-mobile.jpg, ./img/gallery/${data.img}.jpg 2x`;
+    mobileWebp.srcset = `./img/gallery/${data.img}-mobile.webp, ./img/gallery/${data.img}.webp 2x`;
 
     galleryList.append(slideFragment);
   });
