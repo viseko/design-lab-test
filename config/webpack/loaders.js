@@ -35,6 +35,7 @@ export default () => {
         filename: "[name][ext]",
         outputPath: (pathData) =>
           pathData.filename.split("/").slice(1, -1).join("/"), // <-- "img/<subfolders>"
+        publicPath: "../img/",
       },
     },
 

@@ -36,6 +36,14 @@ export default (env) => {
     new CopyPlugin({
       patterns: [
         {
+          from: `${env.paths.publicFolder}\\img`,
+          to: `${env.paths.buildFolder}\\img`,
+        },
+        {
+          from: `${env.paths.publicFolder}\\icons`,
+          to: `${env.paths.buildFolder}\\icons`,
+        },
+        {
           from: `${env.paths.publicFolder}\\manifest.json`,
           to: `${env.paths.buildFolder}`,
         },
